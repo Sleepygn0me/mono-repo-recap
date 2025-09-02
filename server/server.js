@@ -2,10 +2,8 @@
 import express from "express"; //Es6 syntax
 import cors from "cors";
 
-//initilise express
 const app = express();
 
-//use express and cors
 app.use(cors());
 app.use(express.json()); //use Json to manipulate data
 
@@ -16,7 +14,7 @@ app.listen(PORT, function () {
 });
 
 //set up root route
-//TODO: Read data in this route
+
 app.get("/", function (req, res) {
-  res.json({ message: "welcome tot the server. GET comfy" });
+  res.json({ message: "welcome to the server." });
 });
